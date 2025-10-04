@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mini‑Dashboard • Rick & Morty</title>
+<meta name="description" content="Mini‑dashboard z publicznego API: wyszukiwarka, paginacja, stany ładowania/błędu, a11y." />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#results-heading">Pomiń do wyników</a>
+
+
+<header class="container header">
+<h1 id="site-title">Mini‑Dashboard (Vanilla TS)</h1>
+<form id="search-form" role="search" aria-label="Wyszukiwarka postaci">
+<label for="q" class="visually-hidden">Szukaj po imieniu</label>
+<input id="q" name="q" type="search" placeholder="Szukaj postaci…" autocomplete="off" />
+</form>
+<div id="offline" class="offline hidden" role="status" aria-live="polite">Brak połączenia — tryb offline</div>
+<div id="status" class="status" aria-live="polite"></div>
+</header>
+
+
+<main id="main" class="container" tabindex="-1">
+<h2 id="results-heading" tabindex="-1">Wyniki</h2>
+<div id="list" class="grid"></div>
+<nav id="pagination" class="pagination" aria-label="Paginacja"></nav>
+<div id="error" class="error hidden" role="alert"></div>
+</main>
+
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

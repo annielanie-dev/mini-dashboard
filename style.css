@@ -1,0 +1,29 @@
+:root{ --bg:#0b0c10; --panel:#13151a; --text:#f5f7fa; --muted:#aab1bd; --brand:#7aa2ff; --danger:#ff6b6b; --focus:#b4d0ff }
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif }
+.container{ width:min(1100px, 92%); margin-inline:auto }
+.header{ display:grid; gap:.75rem; align-items:center; padding:1.25rem 0 }
+#q{ width:100%; max-width:520px; padding:.7rem .9rem; border-radius:.75rem; border:1px solid #2a2f3a; background:#0f1116; color:var(--text) }
+#q:focus{ outline:3px solid var(--focus); outline-offset:2px }
+.status{ color:var(--muted); min-height:1.25rem }
+.offline{ background:#2a2136; color:#eddcff; padding:.4rem .6rem; border-radius:.5rem; width:max-content }
+.hidden{ display:none }
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; padding:1rem 0 }
+.card{ background:var(--panel); border:1px solid #242832; border-radius:1rem; overflow:hidden; display:flex; flex-direction:column }
+.card .media{ aspect-ratio:16/9; background:#1a1e27; display:grid; place-items:center }
+.card img{ width:100%; height:100%; object-fit:cover; display:block }
+.card .body{ padding:.9rem }
+.card h3{ margin:.2rem 0 .4rem; font-size:1.05rem }
+.card p{ margin:.15rem 0; color:var(--muted) }
+.skeleton{ animation:pulse 1.2s ease-in-out infinite; background:linear-gradient(90deg,#1a1e27 25%,#222835 37%,#1a1e27 63%); background-size:400% 100% }
+@keyframes pulse{ 0%{background-position:100% 0} 100%{background-position:0 0} }
+.pagination{ display:flex; flex-wrap:wrap; gap:.4rem; padding:1rem 0 2rem }
+.page-btn{ border:1px solid #2a2f3a; background:#0f1116; color:var(--text); padding:.5rem .7rem; border-radius:.6rem; cursor:pointer }
+.page-btn[aria-current="page"]{ background:var(--brand); color:#0b0c10; border-color:transparent }
+.page-btn:focus{ outline:3px solid var(--focus); outline-offset:2px }
+.ellipsis{ padding:.5rem .3rem; color:var(--muted) }
+.error{ margin:1rem 0; padding:.8rem 1rem; background:#2a1218; border:1px solid #6b1e2a; border-radius:.6rem; color:#ffd6d6 }
+.retry{ margin-left:.6rem }
+.skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
+.skip-link:focus{ position:static; width:auto; height:auto; padding:.4rem .6rem; background:var(--brand); color:#0b0c10; border-radius:.4rem }
+.visually-hidden{ position:absolute; clip:rect(1px,1px,1px,1px); padding:0; border:0; height:1px; width:1px; overflow:hidden; white-space:nowrap }
