@@ -9,7 +9,7 @@ interface State { q: string; page: number }
 let state: State = { q: "", page: 1 };
 let controller: AbortController | null = null;
 
-// --- DOM refs + mała asercja, żeby TS nie marudził ---
+// --- dom ---
 function assertEl<T extends Element>(el: T | null, id: string): T {
   if (!el) throw new Error(`Element #${id} not found`);
   return el;
@@ -21,11 +21,11 @@ const $status     = assertEl(document.getElementById("status") as HTMLElement | 
 const $error      = assertEl(document.getElementById("error") as HTMLDivElement | null, "error");
 const $offline    = assertEl(document.getElementById("offline") as HTMLElement | null, "offline");
 
-// --- Init ---
+// --- inicjalizacja ---
 initFromUrl();
 render();
 
-// --- Events ---
+// --- zdarzenie ---
 $input.addEventListener("input", debounce(onSearchInput, 300));
 window.addEventListener("popstate", () => { initFromUrl(); render(); });
 $pagination.addEventListener("click", onPaginationClick);
@@ -33,7 +33,7 @@ window.addEventListener("online", updateOfflineBanner);
 window.addEventListener("offline", updateOfflineBanner);
 updateOfflineBanner();
 
-// --- URL <-> state ---
+// --- <-> ---
 function initFromUrl(): void {
   const p = new URLSearchParams(location.search);
   const q = p.get("q") ?? "";
@@ -49,7 +49,7 @@ function pushUrl(): void {
   history.pushState({}, "", `${location.pathname}?${p.toString()}`);
 }
 
-// --- Render ---
+// --- render ---
 async function render(): Promise<void> {
   controller?.abort();
   controller = new AbortController();
@@ -84,7 +84,7 @@ function setStatus(text: string): void {
   $status.textContent = text;
 }
 
-// --- Handlers ---
+// --- handlers ---
 function onSearchInput(): void {
   state.page = 1;
   state.q = $input.value.trim();
@@ -102,7 +102,7 @@ function onPaginationClick(e: Event): void {
   render();
 }
 
-// --- List + cards ---
+// --- lista ---
 function renderList(items: Character[]): void {
   if (!items.length) {
     $list.innerHTML = `<p style="color:var(--muted)">Nie znaleziono wyników dla „${escapeHtml(state.q)}”.</p>`;
@@ -129,7 +129,7 @@ function card(ch: Character): HTMLElement {
   return el;
 }
 
-// --- Pagination ---
+// --- paginacja ---
 function renderPagination(totalPages: number, current: number): void {
   if (!totalPages || totalPages === 1) {
     $pagination.innerHTML = "";
@@ -174,7 +174,7 @@ function pageButton(label: string, page: number): HTMLButtonElement {
   return btn;
 }
 
-// --- UI helpers ---
+// --- UI ---
 function skeletonCards(n: number): string {
   return Array.from({ length: n }, () => `
     <article class="card">
