@@ -55,11 +55,11 @@ mini-dashboard/
 ├── README.md
 └──LICENSE
 
-
 ---
 
 ## 📸 Zrzuty ekranu
-![screenshot-1](https://github.com/user-attachments/assets/your-screenshot-id.png)
+![screenshot-6](https://github.com/user-attachments/assets/9e400dae-f841-4519-b9cd-c8afae49b30b)
+![screenshot-7](https://github.com/user-attachments/assets/93a04f82-7a48-4114-85a1-ebe273cf5709)
 
 ---
 
