@@ -2,6 +2,8 @@ import { fetchCharacters, ApiError } from "./api";
 import { buildPageWindow } from "./pagination";
 import { debounce } from "./utils/debounce";
 import type { Character } from "./types";
+import "../style.css";
+
 
 interface State { q: string; page: number }
 let state: State = { q: "", page: 1 };
