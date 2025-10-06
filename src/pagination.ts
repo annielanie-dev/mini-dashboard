@@ -1,4 +1,4 @@
-/** Tworzy okno stron z elipsami: np. 1 … 4 5 [6] 7 8 … 20 */
+/** okno stron z elipsami: np. 1 … 4 5 [6] 7 8 … 20 */
 export function buildPageWindow(current: number, total: number, span = 2): (number | "…")[] {
 if (total <= 1) return [1];
 const pages = new Set<number>();
