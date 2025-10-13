@@ -32,28 +32,25 @@ Lekki, responsywny dashboard działający w przeglądarce bez backendu. Projekt 
 ---
 
 ## 📂 Struktura projektu
-mini-dashboard/
-└── .github/workflows/
-└── pages.yml
-└── public
-└── images/
-└── src/
-├── main.ts
-├── api.ts
-├── pagination.ts
-├── types.ts
-└── vite-env.d.ts
-└── utils/
-└── debounce.ts
-├── index.html
-├── style.css
-├── vite.config.ts
-├── tsconfig.json
-├── package-lock.json
-├── package.json
-├──.gitignore
-├── README.md
-└──LICENSE
+.github/workflows/pages.yml
+public/
+images/
+src/
+├── utils/debounce.ts
+│ ├── main.ts
+│ ├── api.ts
+│ ├── pagination.ts
+│ ├── types.ts
+│  └── vite-env.d.ts
+.gitignore
+LICENSE
+README.md
+index.html
+style.css
+vite.config.ts
+tsconfig.json
+package-lock.json
+package.json
 
 ---
 
@@ -65,7 +62,7 @@ mini-dashboard/
 
 ## 🔗 Demo
 - GitHub Pages: `https://annielanie-dev.github.io/mini-dashboard/`
-- Repo: [`https://github.com/annielanie-dev/mini-dashboard`]
+- Repo: `https://github.com/annielanie-dev/mini-dashboard`
 
 ---
 
