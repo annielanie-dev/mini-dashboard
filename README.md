@@ -65,7 +65,7 @@ mini-dashboard/
 
 ## 🔗 Demo
 - GitHub Pages: `https://annielanie-dev.github.io/mini-dashboard/`
-- Repo: **`https://github.com/annielanie-dev/mini-dashboard`**
+- Repo: [`https://github.com/annielanie-dev/mini-dashboard`]
 
 ---
 
