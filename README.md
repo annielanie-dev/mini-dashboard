@@ -83,4 +83,4 @@ npm i
 # dev
 npm run dev
 # build + lokalny podgląd builda
-npm run build && npm run preview
+npm run build npm run preview
