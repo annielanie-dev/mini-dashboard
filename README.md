@@ -65,7 +65,12 @@ mini-dashboard/
 
 ## 🔗 Demo
 - GitHub Pages: `https://annielanie-dev.github.io/mini-dashboard/`
-- Repo: `https://github.com/annielanie-dev/mini-dashboard`
+- Repo: **`https://github.com/annielanie-dev/mini-dashboard`**
+
+---
+
+## 📌 Autor
+Projekt stworzony przez **[Ania (annielanie-dev)](https://github.com/annielanie-dev)**  
 
 ---
 
